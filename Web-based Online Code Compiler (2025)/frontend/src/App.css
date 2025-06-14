@@ -1,38 +1,111 @@
 .App {
+  font-family: 'Arial', sans-serif;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  padding: 20px;
+  background-color: #f4f4f4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.controls label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.controls select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.editor-container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.code-editor,
+.stdin-input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Fira Code', 'Monaco', monospace;
+  min-height: 300px;
+  resize: vertical;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.code-editor {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+
+.stdin-input {
+  background-color: #fff;
+  color: #333;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.output-container {
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.output-container h2 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.output,
+.error {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e9e9e9;
+  color: #333;
+}
+
+.error {
+  background-color: #ffe0e0;
+  color: #d9534f;
+  border: 1px solid #d9534f;
 }
